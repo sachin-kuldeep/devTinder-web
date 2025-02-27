@@ -3,12 +3,12 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-      <footer className="footer bg-neutral text-neutral-content items-center p-4 fixed bottom-0">
+      <footer className="footer bg-base-200 items-center p-4 fixed bottom-0">
   <aside className="grid-flow-col items-center">
     <svg
       width="36"
       height="36"
-      viewBox="0 0 24 24"
+      viewBox="0 0 24 24" 
       xmlns="http://www.w3.org/2000/svg"
       fillRule="evenodd"
       clipRule="evenodd"

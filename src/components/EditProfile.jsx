@@ -44,78 +44,116 @@ const EditProfile = ({ user }) => {
 
   return (
     <>
-      <div className="flex justify-center my-10">
-        <div className="flex justify-center mx-10">
+      <div className="flex justify-center my-16 p-5">
+        <div className="flex justify-center mr-5">
           <div className="card bg-base-100 w-96 shadow-xl">
             <div className="card-body">
-              <h2 className="card-title justify-center">Edit Profile</h2>
+              <h2 className="card-title justify-center my-2">Edit Profile</h2>
               <div>
-                <label className="form-control w-full max-w-xs my-1">
-                  <div className="label">
-                    <span className="label-text">First Name</span>
-                  </div>
+                <div className="relative w-full max-w-xs my-4">
                   <input
                     type="text"
+                    id="firstName"
                     value={firstName}
-                    className="input input-bordered w-full max-w-xs"
+                    className="block px-2.5 pb-2.5 pt-4 w-full bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     onChange={(e) => setFirstName(e.target.value)}
+                    placeholder=" "
                   />
-                </label>
-                <label className="form-control w-full max-w-xs my-1">
-                  <div className="label">
-                    <span className="label-text">Last Name</span>
-                  </div>
+                  <label
+                    htmlFor="firstName"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                  >
+                    First Name
+                  </label>
+                </div>
+
+                <div className="relative w-full max-w-xs my-4">
                   <input
                     type="text"
+                    id="lastName"
                     value={lastName}
-                    className="input input-bordered w-full max-w-xs"
+                    className="block px-2.5 pb-2.5 pt-4 w-full bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     onChange={(e) => setLastName(e.target.value)}
+                    placeholder=" "
                   />
-                </label>
-                <label className="form-control w-full max-w-xs my-1">
-                  <div className="label">
-                    <span className="label-text">age</span>
-                  </div>
+                  <label
+                    htmlFor="lastName"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                  >
+                    Last Name
+                  </label>
+                </div>
+
+                <div className="relative w-full max-w-xs my-4">
                   <input
                     type="text"
+                    id="age"
                     value={age}
-                    className="input input-bordered w-full max-w-xs"
+                    className="block px-2.5 pb-2.5 pt-4 w-full  bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     onChange={(e) => setAge(e.target.value)}
+                    placeholder=" "
                   />
-                </label>
-                <label className="form-control w-full max-w-xs my-1">
-                  <div className="label">
-                    <span className="label-text">About</span>
-                  </div>
-                  <input
-                    type="text"
+                  <label
+                    htmlFor="age"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                  >
+                    Age
+                  </label>
+                </div>
+
+                <div className="relative w-full max-w-xs my-4">
+                  <textarea
+                    id="about"
                     value={about}
-                    className="input input-bordered w-full max-w-xs"
+                    rows="2"
+                    className="block px-2.5 pb-2.5 pt-4 w-full  bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     onChange={(e) => setAbout(e.target.value)}
-                  />
-                </label>
-                <label className="form-control w-full max-w-xs my-1">
-                  <div className="label">
-                    <span className="label-text">Gender</span>
-                  </div>
-                  <input
-                    type="text"
+                    placeholder=" "
+                  ></textarea> 
+                  <label
+                    htmlFor="about"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                  >
+                    About
+                  </label>
+                </div>
+
+                <div className="relative w-full max-w-xs my-4">
+                  <select
+                    id="gender"
+                    name="gender"
                     value={gender}
-                    className="input input-bordered w-full max-w-xs"
+                    className="block px-2.5 pb-2.5 pt-4 w-full  bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     onChange={(e) => setGender(e.target.value)}
-                  />
-                </label>
-                <label className="form-control w-full max-w-xs my-1">
-                  <div className="label">
-                    <span className="label-text">Photo URL</span>
-                  </div>
+                  >
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                  </select>
+                  <label
+                    htmlFor="gender"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                  >
+                    Gender
+                  </label>
+                </div>
+
+                <div className="relative w-full max-w-xs my-4">
                   <input
                     type="text"
+                    id="photoUrl"
                     value={photoUrl}
-                    className="input input-bordered w-full max-w-xs"
+                    className="block px-2.5 pb-2.5 pt-4 w-full  bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     onChange={(e) => setPhotoUrl(e.target.value)}
+                    placeholder=" "
                   />
-                </label>
+                  <label
+                    htmlFor="photoUrl"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                  >
+                    Photo URL
+                  </label>
+                </div>
               </div>
               <p className="text-red-500">{error}</p>
               <div className="card-actions justify-center m-1">
@@ -132,7 +170,7 @@ const EditProfile = ({ user }) => {
       </div>
       <div>
         {showToast && (
-          <div className="toast toast-top toast-center">
+          <div className="toast toast-top toast-right mt-16">
             <div className="alert alert-success">
               <span>Profile saved successfully.</span>
             </div>
