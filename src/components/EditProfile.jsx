@@ -8,9 +8,9 @@ import { addUser } from "../utils/userSlice";
 const EditProfile = ({ user }) => {
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
-  const [age, setAge] = useState(user.age);
-  const [about, setAbout] = useState(user.about);
-  const [gender, setGender] = useState(user.gender);
+  const [age, setAge] = useState(user.age || "");
+  const [about, setAbout] = useState(user.about || "");
+  const [gender, setGender] = useState(user.gender || "");
   const [photoUrl, setPhotoUrl] = useState(user.photoUrl);
   const [error, setError] = useState("");
   const [showToast, setShowToast] = useState(false);
@@ -46,7 +46,7 @@ const EditProfile = ({ user }) => {
     <>
       <div className="flex justify-center my-16 p-5">
         <div className="flex justify-center mr-5">
-          <div className="card bg-base-100 w-96 shadow-xl">
+          <div className="card bg-base-200 w-96 shadow-xl">
             <div className="card-body">
               <h2 className="card-title justify-center my-2">Edit Profile</h2>
               <div>
@@ -123,9 +123,10 @@ const EditProfile = ({ user }) => {
                     id="gender"
                     name="gender"
                     value={gender}
-                    className="block px-2.5 pb-2.5 pt-4 w-full  bg-transparent rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    className="block px-2.5 pb-2.5 pt-4 w-full  bg-base-200 rounded-lg border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     onChange={(e) => setGender(e.target.value)}
                   >
+                    <option value="">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="others">Others</option>
@@ -164,9 +165,11 @@ const EditProfile = ({ user }) => {
             </div>
           </div>
         </div>
+        <div>
         <UserCard
           user={{ firstName, lastName, age, gender, about, photoUrl }}
         />
+        </div>
       </div>
       <div>
         {showToast && (
