@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { BASE_URL } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/connectionSlice";
+import { Link } from "react-router-dom";
 
 const Connections = () => {
   const connections = useSelector((store) => store.connections);
@@ -23,10 +24,11 @@ const Connections = () => {
 
   if (!connections) return;
 
-  if (connections.length === 0) return <h1 className="flex justify-center my-20">No Connections found.</h1>;
+  if (connections.length === 0)
+    return <h1 className="flex justify-center my-20">No Connections found.</h1>;
 
   return (
-    <div className="flex flex-col items-center my-20">
+    <div className="flex flex-col items-center my-20 px-4 md:px-0">
       <h1 className="text-bold text-white text-3xl">Connections</h1>
 
       {connections.map((connection) => {
@@ -34,20 +36,30 @@ const Connections = () => {
           connection;
 
         return (
-          <div key={_id} className="flex m-4 p-4 rounded-lg bg-base-300 w-1/2">
-            <div>
-              <img
-                className="w-20 h-20 rounded-full"
-                src={photoUrl}
-                alt="photo"
-              />
-            </div>
-            <div className="text-left mx-4">
+          <div
+            key={_id}
+            className="flex justify-between m-4 p-4 rounded-lg bg-base-300 w-full md:w-1/2"
+          >
+            <div className="flex">
+              <div>
+                <img
+                  className="w-20 h-20 rounded-full"
+                  src={photoUrl}
+                  alt="photo"
+                />
+              </div>
+              <div className="text-left mx-4">
                 <h2 className="font-bold text-xl">
-                    {firstName + " " + lastName}
+                  {firstName + " " + lastName}
                 </h2>
-                {age && gender &&<p>{age + ", " + gender}</p>}
+                {age && gender && <p>{age + ", " + gender}</p>}
                 <p>{about}</p>
+              </div>
+            </div>
+            <div className="flex items-center m-3">
+              <Link to={"/chat/" + _id}>
+                <button className="btn btn-primary">Chat</button>
+              </Link>
             </div>
           </div>
         );

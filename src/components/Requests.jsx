@@ -38,7 +38,7 @@ const Requests = () => {
     return <h1 className="flex justify-center my-20">No Requests found.</h1>;
 
   return (
-    <div className="flex flex-col items-center my-20">
+    <div className="flex flex-col items-center my-20  px-4 md:px-0">
       <h1 className="text-bold text-white text-3xl">Requests</h1>
 
       {requests.map((request) => {
@@ -48,7 +48,7 @@ const Requests = () => {
         return (
           <div
             key={_id}
-            className="flex m-4 p-4 justify-between items-center rounded-lg bg-base-300 w-1/2"
+            className="flex m-4 p-4 justify-between items-center rounded-lg bg-base-300 w-full md:w-1/2"
           >
             <div className="flex">
               <div>

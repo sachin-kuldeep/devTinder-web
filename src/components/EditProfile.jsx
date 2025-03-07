@@ -44,8 +44,8 @@ const EditProfile = ({ user }) => {
 
   return (
     <>
-      <div className="flex justify-center my-16 p-5">
-        <div className="flex justify-center mr-5">
+      <div className="flex flex-wrap justify-center my-16 p-5">
+        <div className="flex justify-center p-10 mx-5">
           <div className="card bg-base-200 w-96 shadow-xl">
             <div className="card-body">
               <h2 className="card-title justify-center my-2">Edit Profile</h2>
@@ -61,7 +61,7 @@ const EditProfile = ({ user }) => {
                   />
                   <label
                     htmlFor="firstName"
-                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-200 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
                   >
                     First Name
                   </label>
@@ -78,7 +78,7 @@ const EditProfile = ({ user }) => {
                   />
                   <label
                     htmlFor="lastName"
-                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-200 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
                   >
                     Last Name
                   </label>
@@ -95,7 +95,7 @@ const EditProfile = ({ user }) => {
                   />
                   <label
                     htmlFor="age"
-                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-200 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
                   >
                     Age
                   </label>
@@ -112,7 +112,7 @@ const EditProfile = ({ user }) => {
                   ></textarea> 
                   <label
                     htmlFor="about"
-                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-200 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
                   >
                     About
                   </label>
@@ -133,7 +133,7 @@ const EditProfile = ({ user }) => {
                   </select>
                   <label
                     htmlFor="gender"
-                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-200 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
                   >
                     Gender
                   </label>
@@ -150,7 +150,7 @@ const EditProfile = ({ user }) => {
                   />
                   <label
                     htmlFor="photoUrl"
-                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-100 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
+                    className="absolute  duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-base-200 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-2"
                   >
                     Photo URL
                   </label>
@@ -166,6 +166,7 @@ const EditProfile = ({ user }) => {
           </div>
         </div>
         <div>
+          <h1 className="card-title justify-center my-2">Your Card Preview</h1>
         <UserCard
           user={{ firstName, lastName, age, gender, about, photoUrl }}
         />
